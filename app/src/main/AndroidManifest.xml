@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/github_logo"
+        android:label="GithubApi"
+        android:roundIcon="@drawable/github_logo"
+        android:supportsRtl="true"
+        android:theme="@style/SplashTheme">
+        <activity
+            android:name=".app.ui.createrepositories.CreateRepoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".auth.ui.login.LoginActivity"
+            android:exported="true">
+            <intent-filter tools:ignore="AppLinkUrlError">
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="callback"
+                    android:scheme="myapp" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".app.ui.AppActivity"
+            android:exported="true"></activity>
+    </application>
+
+</manifest>

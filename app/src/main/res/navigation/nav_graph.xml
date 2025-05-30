@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/followersFragment">
+
+    <fragment
+        android:id="@+id/followersFragment"
+        android:name="com.example.appgithubapioauth2.app.ui.followers.FollowersFragment"
+        android:label="fragment_followers"
+        tools:layout="@layout/fragment_followers" >
+        <action
+            android:id="@+id/action_followersFragment_to_repoFragment"
+            app:destination="@id/repoFragment" />
+        <action
+            android:id="@+id/action_followersFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.appgithubapioauth2.app.ui.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_followersFragment"
+            app:destination="@id/followersFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/repoFragment"
+        android:name="com.example.appgithubapioauth2.app.ui.repositories.RepoFragment"
+        android:label="fragment_repo"
+        tools:layout="@layout/fragment_repo" >
+        <action
+            android:id="@+id/action_repoFragment_to_profileFragment2"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_repoFragment_to_followersFragment"
+            app:destination="@id/followersFragment" />
+    </fragment>
+</navigation>

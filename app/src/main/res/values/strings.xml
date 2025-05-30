@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">AppGithubApiOauth2</string>
+
+    //login
+    <string name="enter_account_spotify">Entre com sua conta do Github</string>
+    <string name="enter_button">Entrar</string>
+
+    //toast // trocar os nomes de spotify para Github
+    <string name="playlist_created_success">Playlist criada com sucesso!</string>
+    <string name="playlist_created_success_with_name">Playlist %s criada com sucesso!</string>
+    <string name="error_create_playlist">Erro ao criar playlist</string>
+    <string name="error_internet">Modo offline: Não é possível criar playlists</string>
+    <string name="auth_error">Falha na autenticação</string>
+    <string name="error_message">Erro: %s - %s</string>
+    <string name="offline_mode">Modo offline</string>
+    <string name="error_message_get_token">Erro ao obter token</string>
+    <string name="error_message_save_token">"Erro ao salvar tokens"</string>
+    <string name="error_message_direct_code_not_found">Código de autorização não encontrado</string>
+    <string name="error_message_search_playlists">Erro ao buscar playlists</string>
+    <string name="error_message_search_profile">Erro ao buscar perfil do usuário</string>
+
+    //playlist //trocar ou excluir string
+    <string name="insert_name_your_repo_title">Dê um nome ao seu repositório</string>
+
+    //mudar bottom navigation menu //trocar os nomes
+    <string name="artists">Artistas</string>
+    <string name="repositories">Repositórios</string>
+    <string name="followers">Seguindo</string>
+    <string name="playlists">Playlists</string>
+    <string name="profile">Perfil</string>
+
+    //profile
+    <string name="image_profile">imagem do perfil do usuario</string>
+    <string name="name_profile_github">Nome de Perfil</string>
+    <string name="close_app_button">Sair</string>
+
+    <string name="create_repo_button">Criar Repositório</string>
+    <string name="no_repo_avaiable">Nenhum repositório disponível</string>
+    <string name="my_repositories">Meus Repositórios</string>
+
+    <string name="insert_name_your_repo">test-repo</string>
+
+    <string name="create_your_repo_button">Criar</string>
+</resources>

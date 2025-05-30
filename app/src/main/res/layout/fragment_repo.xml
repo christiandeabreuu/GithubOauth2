@@ -1,0 +1,75 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".app.ui.repositories.RepoFragment">
+
+    <TextView
+        android:id="@+id/playlistsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_24"
+        android:layout_marginTop="@dimen/margin_42"
+        android:fontFamily="@font/rubik_bold"
+        android:text="@string/my_repositories"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_16"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/noPlaylistsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_16"
+        android:text="@string/no_repo_avaiable"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_16"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/playlistsTextView" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/playlistsProfileImageView"
+        android:layout_width="@dimen/margin_32"
+        android:layout_height="@dimen/margin_32"
+        android:layout_marginTop="@dimen/margin_42"
+        android:layout_marginEnd="@dimen/margin_24"
+        android:background="@drawable/circle_background"
+        android:scaleType="centerCrop"
+        android:src="@drawable/github_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/reposRecyclerView"
+        android:layout_width="@dimen/margin_0"
+        android:layout_height="@dimen/margin_0"
+        android:layout_marginTop="@dimen/margin_20"
+        android:layout_marginBottom="@dimen/margin_8"
+        app:layout_constraintBottom_toTopOf="@id/buttonToGoCreatePlaylist"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/playlistsTextView"
+        tools:listitem="@layout/item_repo" />
+
+    <Button
+        android:id="@+id/buttonToGoCreatePlaylist"
+        android:layout_width="@dimen/margin_185"
+        android:layout_height="@dimen/margin_42"
+        android:layout_marginTop="@dimen/margin_35"
+        android:backgroundTint="@color/white"
+        android:fontFamily="@font/rubik_bold"
+        android:text="@string/create_repo_button"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

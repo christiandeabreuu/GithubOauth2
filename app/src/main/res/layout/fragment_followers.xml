@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".app.ui.followers.FollowersFragment">
+
+    <TextView
+        android:id="@+id/followersTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_24"
+        android:layout_marginTop="@dimen/margin_34"
+        android:fontFamily="@font/rubik_bold"
+        android:text="Seguindo"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_16"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/profileImageView"
+        android:layout_width="@dimen/margin_32"
+        android:layout_height="@dimen/margin_32"
+        android:layout_marginTop="@dimen/margin_34"
+        android:layout_marginEnd="@dimen/margin_24"
+        android:background="@drawable/circle_background"
+        android:contentDescription="photo_profile"
+        android:scaleType="centerCrop"
+        android:src="@drawable/github_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/CircleImageView" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/followersRecyclerView"
+        android:layout_width="@dimen/margin_0"
+        android:layout_height="@dimen/margin_0"
+        android:layout_marginTop="@dimen/margin_16"
+        android:layout_marginBottom="@dimen/margin_8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/followersTextView"
+        tools:listitem="@layout/item_followers" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

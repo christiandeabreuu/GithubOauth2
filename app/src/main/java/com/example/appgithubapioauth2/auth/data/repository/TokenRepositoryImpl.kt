@@ -1,0 +1,28 @@
+package com.example.appgithubapioauth2.auth.data.repository
+
+import android.content.Context
+
+class TokenRepositoryImpl(context: Context) : TokenRepository {
+    private val sharedPreferences =
+        context.getSharedPreferences(GITHUB_PREFS, Context.MODE_PRIVATE)
+
+    override fun saveTokens(accessToken: String): Boolean {
+        return try {
+            val editor = sharedPreferences.edit().apply {
+                putString(ACCESS_TOKEN_KEY, accessToken)
+            }
+            editor.commit()
+        } catch (e: Exception) {
+            false
+        }
+    }
+
+    override fun getAccessToken(): String? =
+        sharedPreferences.getString(ACCESS_TOKEN_KEY, null)
+
+
+    private companion object {
+        private const val ACCESS_TOKEN_KEY = "ACCESS_TOKEN"
+        private const val GITHUB_PREFS = "GithubPrefs"
+    }
+}

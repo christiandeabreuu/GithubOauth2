@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".app.ui.profile.ProfileFragment">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/profileImageView"
+        android:layout_width="@dimen/margin_128"
+        android:layout_height="@dimen/margin_128"
+        android:layout_marginHorizontal="@dimen/margin_116"
+        android:layout_marginTop="@dimen/margin_234"
+        android:background="@drawable/circle_background"
+        android:contentDescription="@string/image_profile"
+        android:scaleType="centerCrop"
+        android:src="@drawable/github_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/profileTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="@dimen/margin_34"
+        android:fontFamily="@font/rubik_medium"
+        android:text="@string/name_profile_github"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_24"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profileImageView" />
+
+    <Button
+        android:id="@+id/buttonClose"
+        android:layout_width="@dimen/margin_113"
+        android:layout_height="@dimen/margin_42"
+        android:layout_marginTop="@dimen/margin_35"
+        android:backgroundTint="@color/white"
+        android:fontFamily="@font/rubik_bold"
+        android:text="@string/close_app_button"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profileTextView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

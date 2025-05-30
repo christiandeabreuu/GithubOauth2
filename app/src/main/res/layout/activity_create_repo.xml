@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/margin_10"
+    android:background="@color/black"
+    tools:context=".app.ui.createrepositories.CreateRepoActivity">
+
+    <ImageView
+        android:id="@+id/closeButton"
+        android:layout_width="@dimen/margin_32"
+        android:layout_height="@dimen/margin_32"
+        android:layout_marginEnd="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_16"
+        android:contentDescription="@string/close_app_button"
+        android:src="@drawable/ic_x"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/createRepoTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_48"
+        android:fontFamily="@font/rubik_medium"
+        android:text="@string/insert_name_your_repo_title"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_14"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/closeButton" />
+
+    <EditText
+        android:id="@+id/repoNameEditText"
+        android:layout_width="@dimen/margin_0"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_32"
+        android:layout_marginTop="@dimen/margin_16"
+        android:layout_marginEnd="@dimen/margin_32"
+        android:autofillHints="username"
+        android:backgroundTint="@color/white"
+        android:fontFamily="@font/rubik_bold"
+        android:gravity="center"
+        android:hint="@string/insert_name_your_repo"
+        android:inputType="text"
+        android:textColor="@color/white"
+        android:textColorHint="@color/gray"
+        android:textSize="@dimen/text_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/createRepoTextView" />
+
+    <Button
+        android:id="@+id/createButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_32"
+        android:backgroundTint="@color/white"
+        android:fontFamily="@font/rubik_bold"
+        android:text="@string/create_your_repo_button"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/repoNameEditText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
